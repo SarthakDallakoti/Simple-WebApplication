@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+ {% block content %}
+<center>
+<br> <br>
+<h1>All Assessment</h1>
+</center>
+{% for item in data %}
+<section class="course_data">
+<div class = "row">
+    <div class = "col">
+        <h4><p><b> {{item.title}}</b> </p></h4>
+        <p> <b>Module Code:</b> <td>{{item.module_code}}</p>
+        <p> <b>Deadline:</b> <td>{{item.deadline}}</p>
+        <p> <b>Description:</b> <td>{{item.description}}
+        <p> <b>Status:</b> <td>{{item.status}}</p>
+    </div>    
+    <hr>
+    </div>
+</section>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+ {% block content %}
+  {% with messages = get_flashed_messages() %}
+   {% if messages %}
+    <ul>
+     {% for message in messages %}
+       <li>{{ message }} </li>
+     {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<center>
+<br> <br>
+<h1>Create Assessment</h1>
+</center>
+
+<br>
+<center>
+<div class ="colform">
+  <form action="" method="post" name="Create Assessment">
+    {{ form.hidden_tag() }}
+    <p>
+        <br>
+       <p class = "inputbox"> {{ form.title}}</p>
+    	<p class = "inputbox">{{ form.module_code }}</p>
+
+	
+
+	<p class = "inputbox"> {{ form.deadline}}</p>
+
+	<p type = "text">{{ form.description}}</p>
+    <ul> 
+	{{form.submit}}
+	<button class="btn" type="submit" value="post">Submit</button></ul>
+</center>
+</form>
+</div>
+{% endblock %}
+
